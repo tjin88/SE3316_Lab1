@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  h1 {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  ul.searchBoxes {
+    padding: 0px;
+    list-style: none;
+    justify-content: space-evenly; /* Distribute items evenly horizontally */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+  }
+
+  ul.searchBoxes li {
+    margin: 0px 0px 10px 0px;
+  }
+  
+  input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  }
+
+  button:hover {
+    background-color: #555; 
+  }
+  
+  button:active {
+    background-color: #777; 
+  }
+
+  /* Style the unordered list with the class "country_table" */
+  ul.country_table {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Wrap to the next line if necessary */
+    justify-content: space-evenly; /* Distribute items evenly horizontally */
+  }
+  
+  /* Style each list item to be a horizontal block */
+  ul.country_table li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    width: 80vw;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the image, name, currency, and Wikipedia link */
+  .countryFlag {
+    width: 50px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .countryName {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .countryCurrency {
+    font-style: italic;
+  }
+  
+  .countryRegions {
+    margin-top: 10px;
+  }
+  
+  .countryWikipedia {
+    text-decoration: none;
+    color: #007bff;
+    margin-top: 10px;
+  }
+  
+  .countryWikipedia:hover {
+    text-decoration: underline;
+  }
+  

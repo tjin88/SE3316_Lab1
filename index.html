@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SE 3316 Lab 1</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="">
+<script defer src="index.js"></script>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!-- Place your content here -->
+<h1>SE 3316 Lab 1</h1>
+
+<!-- 2 boxes here -->
+<ul class="searchBoxes">
+    <li>
+        <input placeholder="Name" id="NameInput" type="text" onkeypress="nameSearchFunction()"/>
+        <button>Search</button>
+    </li>
+    <li>
+        <input placeholder="Currency Code" id="CurrencyCodeInput" type="text" onkeypress="currencySearchFunction()"/>
+        <button>Search</button>
+    </li>
+</ul>
+
+<!-- Country + info -->
+<ul class="country_table">
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/af.png"/>
+        <p class="countryName">Afghanistan</p>
+        <p class="countryCurrency">Afghani</p>
+        <p class="countryRegions">Badakhshan
+            Badghis
+            Baghlan
+            Balkh
+            Bamyan
+            Daykundi
+            Farah
+            Faryab
+            Ghazni
+            Ghor
+            Helmand
+            Herat
+            Jowzjan
+            Kabul
+            Kandahar
+            Kapisa
+            Khost
+            Kunduz
+            Laghman
+            Logar
+            Nangarhar
+            Nimroz
+            Paktiya
+            Parwan
+            Sar-e Pul
+            Takhar
+            Uruzgan</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Afghanistan">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/al.png"/>
+        <p class="countryName">Albania</p>
+        <p class="countryCurrency">Lek</p>
+        <p class="countryRegions">Berat
+            Diber
+            Durres
+            Elbasan
+            Fier
+            Gjirokaster
+            Korce
+            Kukes
+            Lezhe
+            Shkoder
+            Tirane
+            Vlore</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Albania">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/dz.png"/>
+        <p class="countryName">Algeria</p>
+        <p class="countryCurrency">Algerian Dinar</p>
+        <p class="countryRegions">Adrar
+            Ain Defla
+            Ain Temouchent
+            Alger
+            Annaba
+            Batna
+            Bechar
+            Bejaia
+            Biskra
+            Blida
+            Bordj Bou Arreridj
+            Bouira
+            Boumerdes
+            Chlef
+            Constantine
+            Djelfa
+            El Bayadh
+            El Oued
+            El Tarf
+            Ghardaia
+            Guelma
+            Illizi
+            Jijel
+            Khenchela
+            Laghouat
+            M'sila
+            Mascara
+            Medea
+            Mila
+            Mostaganem
+            Naama
+            Oran
+            Ouargla
+            Oum el Bouaghi
+            Relizane
+            Saida
+            Setif
+            Sidi Bel Abbes
+            Skikda
+            Souk Ahras
+            Tamanrasset
+            Tebessa
+            Tiaret
+            Tindouf
+            Tipaza
+            Tissemsilt
+            Tizi Ouzou</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Algeria">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/ad.png"/>
+        <p class="countryName">Andorra</p>
+        <p class="countryCurrency">Euros</p>
+        <p class="countryRegions">Andorra la Vella
+            Canillo
+            Encamp
+            Escaldes-Engordany
+            La Massana
+            Ordino
+            Sant Julia de Loria</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Andorra">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/ao.png"/>
+        <p class="countryName">Angola</p>
+        <p class="countryCurrency">Angolan kwanza</p>
+        <p class="countryRegions">Bengo
+            Benguela
+            Bie
+            Cabinda
+            Cuando Cubango
+            Cuanza-Norte
+            Cuanza-Sul
+            Cunene
+            Huambo
+            Huila
+            Luanda
+            Lunda-Norte
+            Lunda-Sul
+            Malange
+            Moxico
+            Namibe
+            Uige
+            Zaire</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Angola">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/ag.png"/>
+        <p class="countryName">Antigua and Barbuda</p>
+        <p class="countryCurrency">East Caribbean Dollar</p>
+        <p class="countryRegions">Redonda
+            Saint George
+            Saint John
+            Saint Paul
+            Saint Peter
+            Saint Philip</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Antigua and Barbuda">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/ar.png"/>
+        <p class="countryName">Argentina</p>
+        <p class="countryCurrency">Peso</p>
+        <p class="countryRegions">Buenos Aires
+            Catamarca
+            Chaco
+            Chubut
+            Ciudad Autonoma de Buenos Aires
+            Cordoba
+            Corrientes
+            Entre Rios
+            Formosa
+            Jujuy
+            La Pampa
+            La Rioja
+            Mendoza
+            Misiones
+            Neuquen
+            Rio Negro
+            Salta
+            San Juan
+            San Luis
+            Santa Cruz
+            Santa Fe
+            Santiago del Estero
+            Tierra del Fuego
+            Tucuman</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Argentina">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/am.png"/>
+        <p class="countryName">Armenia</p>
+        <p class="countryCurrency">Dram</p>
+        <p class="countryRegions">Aragacotn
+            Ararat
+            Armavir
+            Erevan
+            Gegark'unik'
+            Kotayk'
+            Lori
+            Sirak
+            Syunik'
+            Tavus
+            Vayoc Jor</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Armenia">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/au.png"/>
+        <p class="countryName">Australia</p>
+        <p class="countryCurrency">Australian Dollars</p>
+        <p class="countryRegions">Australian Capital Territory
+            New South Wales
+            Northern Territory
+            Queensland
+            South Australia
+            Tasmania
+            Victoria
+            Western Australia</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Australia">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/at.png"/>
+        <p class="countryName">Austria</p>
+        <p class="countryCurrency">Euros</p>
+        <p class="countryRegions">Burgenland
+            Karnten
+            Niederosterreich
+            Oberosterreich
+            Salzburg
+            Steiermark
+            Tirol
+            Vorarlberg
+            Wien</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Austria">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/az.png"/>
+        <p class="countryName">Azerbaijan</p>
+        <p class="countryCurrency">Manat</p>
+        <p class="countryRegions">Abseron
+            Agcabadi
+            Agsu
+            Astara
+            Baki
+            Balakan
+            Barda
+            Beylaqan
+            Bilasuvar
+            Calilabad
+            Fuzuli
+            Gadabay
+            Ganca
+            Goranboy
+            Goycay
+            Goygol
+            Imisli
+            Ismayilli
+            Kurdamir
+            Lankaran
+            Masalli
+            Mingacevir
+            Naftalan
+            Naxcivan
+            Neftcala
+            Oguz
+            Qabala
+            Qax
+            Qazax
+            Quba
+            Qusar
+            Saatli
+            Sabirabad
+            Saki
+            Salyan
+            Samaxi
+            Samkir
+            Samux
+            Sirvan
+            Sumqayit
+            Tartar
+            Ucar
+            Xacmaz
+            Xocavand
+            Yardimli
+            Yevlax
+            Zaqatala
+            Zardab</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Azerbaijan">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/bs.png"/>
+        <p class="countryName">Bahamas</p>
+        <p class="countryCurrency">Bahamian Dollar</p>
+        <p class="countryRegions">Black Point
+            Central Abaco
+            City of Freeport
+            East Grand Bahama
+            Harbour Island
+            Long Island
+            New Providence
+            North Abaco
+            North Andros
+            North Eleuthera
+            South Eleuthera
+            West Grand Bahama</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Bahamas">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/bh.png"/>
+        <p class="countryName">Bahrain</p>
+        <p class="countryCurrency">Bahraini Dinar</p>
+        <p class="countryRegions">Al 'Asimah
+            Al Janubiyah
+            Al Muharraq
+            Ash Shamaliyah</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Bahrain">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/bd.png"/>
+        <p class="countryName">Bangladesh</p>
+        <p class="countryCurrency">Taka</p>
+        <p class="countryRegions">Barishal
+            Chattogram
+            Dhaka
+            Khulna
+            Rajshahi
+            Rangpur
+            Sylhet</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Bangladesh">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/bb.png"/>
+        <p class="countryName">Barbados</p>
+        <p class="countryCurrency">Barbadian Dollar</p>
+        <p class="countryRegions">Christ Church
+            Saint Andrew
+            Saint George
+            Saint James
+            Saint John
+            Saint Lucy
+            Saint Michael
+            Saint Peter
+            Saint Philip
+            Saint Thomas</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Barbados">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/by.png"/>
+        <p class="countryName">Belarus</p>
+        <p class="countryCurrency">Belarus Ruble</p>
+        <p class="countryRegions">Brestskaya voblasts'
+            Homyel'skaya voblasts'
+            Horad Minsk
+            Hrodzyenskaya voblasts'
+            Mahilyowskaya voblasts'
+            Minskaya voblasts'
+            Vitsyebskaya voblasts'</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Belarus">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/be.png"/>
+        <p class="countryName">Belgium</p>
+        <p class="countryCurrency">Euros</p>
+        <p class="countryRegions">Antwerpen
+            Brabant wallon
+            Brussels Hoofdstedelijk Gewest
+            Hainaut
+            Liege
+            Limburg
+            Luxembourg
+            Namur
+            Oost-Vlaanderen
+            Vlaams-Brabant
+            West-Vlaanderen</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Belgium">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/bz.png"/>
+        <p class="countryName">Belize</p>
+        <p class="countryCurrency">Belizean Dollar</p>
+        <p class="countryRegions">Belize
+            Cayo
+            Corozal
+            Orange Walk
+            Stann Creek
+            Toledo</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Belize">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/bj.png"/>
+        <p class="countryName">Benin</p>
+        <p class="countryCurrency">CFA Franc BCEAO</p>
+        <p class="countryRegions">Atacora
+            Atlantique
+            Borgou
+            Collines
+            Donga
+            Littoral
+            Mono
+            Oueme
+            Plateau
+            Zou</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Benin">Wikipedia Link</a>
+    </li>
+    <li>
+        <img class="countryFlag" src="./Lab1-country-data/country_flags/bt.png"/>
+        <p class="countryName">Bhutan</p>
+        <p class="countryCurrency">Indian Rupee</p>
+        <p class="countryRegions">Bumthang
+            Chhukha
+            Dagana
+            Gasa
+            Lhuentse
+            Monggar
+            Paro
+            Pema Gatshel
+            Punakha
+            Samdrup Jongkhar
+            Samtse
+            Sarpang
+            Thimphu
+            Trashigang
+            Trongsa
+            Tsirang
+            Wangdue Phodrang</p>
+        <a class="countryWikipedia" href="https:/www.wikipedia.com/wiki/Bhutan">Wikipedia Link</a>
+    </li>
+</ul>
+</body>
+</html>
